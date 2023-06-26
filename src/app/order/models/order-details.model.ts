@@ -1,7 +1,7 @@
+import { Product } from "src/app/product/models/product.model";
+import { Order } from "./order.model";
+
 export interface OrderDetails {
-    OrderId: string;
-    OrderDate: string;
-    UserId: string;
-    Products: { ProductId: number, Quantity: number }[];
-    PaymentType: string;
+    Order: Order | undefined;
+    ProductsToDisplay: Product[];
 }

@@ -19,7 +19,7 @@ export class ListOrderComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._orderService.getAllOrders().subscribe({
+    this._orderService.getOrders().subscribe({
       next: (data) => this.orders = data,
       error: (err) => this.errorMessage = err,
       complete: () => console.info('complete')

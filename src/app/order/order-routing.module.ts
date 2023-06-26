@@ -15,7 +15,7 @@ const routes: Routes = [
     path: ':id',
     component: ViewOrderComponent,
     data: { breadCrumb: 'View Order' },
-    resolve: { order: orderResolver }
+    resolve: { orderDetails: orderResolver }
   }
 ];
 
