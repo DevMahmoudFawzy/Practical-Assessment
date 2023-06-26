@@ -1,11 +1,15 @@
 <section class="wrapper">
-    <div *ngFor="let prod of products" class="product-item__wrapper">
+    <div *ngFor="let prod of products" [ngClass]="{'highlight': prod.AvailablePieces <= 5}" class="product-item__wrapper">
         <div class="product-item">
             <img alt="" class="product-image" src="{{ prod.ProductImg }}">
             <div class="product-details__wrapper">
                 <div class="product-details">
                     <h3 class="">{{ prod.ProductName }}</h3>
                     <p class="">Available Pieces: {{ prod.AvailablePieces }}</p>
+                    <div class="d-flex align-items-center">
+                        <span>Qty : </span>
+                        <input type="number" id="typeNumber" style="max-width: 100px;" />
+                    </div>
                     <h6 class="product-price">$ {{ prod.ProductPrice }}</h6>
                     <a href="#" class="cart-btn">add to cart</a>
                 </div>

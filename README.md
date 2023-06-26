@@ -1,3 +1,13 @@
+# Description
+
+This is a task for an interview which requires showing different products, orders & customers in different pages.
+
+# Environment Replacement
+
+I've added 2 files for two environments (development & production) in order to change variables depending on the current environment.
+
+Also changed angular.json file for angular to be able to do this replacement automatically depending on the flag sent in command.
+
 # PracticalAssessment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.

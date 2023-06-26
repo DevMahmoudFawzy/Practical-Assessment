@@ -1,0 +1,24 @@
+<div class="container" style="padding: 64px 0;">
+    <table class="table table-success table-striped-columns table-hover">
+        <thead>
+            <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">User Name</th>
+                <th scope="col">User Email</th>
+                <th scope="col">User Phone</th>
+                <th scope="col">User Address</th>
+                <th scope="col">User Register Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <th scope="row">{{customer.Id}}</th>
+                <td>{{customer.Name}}</td>
+                <td>{{customer.Email}}</td>
+                <td>{{customer.Phone}}</td>
+                <td>{{customer.Address}}</td>
+                <td>{{customer.RegisterDate | date :'short'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

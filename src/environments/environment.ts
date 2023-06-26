@@ -6,4 +6,5 @@ export const environment = {
     production: false,
     orderServiceEndPoint: "assets/data/orders.json",
     productServiceEndPoint :"assets/data/products.json",
+    customerServiceEndPoint :"assets/data/users.json",
 };

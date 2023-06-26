@@ -46,6 +46,10 @@
     }
 }
 
+.main-nav {
+    display: none;
+}
+
 .main-nav__items {
     list-style: none;
     margin: 0;
@@ -67,5 +71,15 @@
     a:hover,
     a:active {
         color: var(--main-color);
+    }
+}
+
+@media(min-width: 40rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
     }
 }

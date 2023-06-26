@@ -6,15 +6,17 @@
                 <th scope="col">Order Date</th>
                 <th scope="col">User Id</th>
                 <th scope="col">Payment Method</th>
+                <th scope="col">Total Price</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let order of orders">
                 <th scope="row">{{order.OrderId}}</th>
-                <td>{{order.OrderDate}}</td>
+                <td>{{order.OrderDate | date :'short'}}</td>
                 <td>{{order.UserId}}</td>
                 <td>{{order.PaymentType}}</td>
+                <td>${{getOrderTotalPrice(order.OrderId)}}</td>
                 <td><button routerLink="/orders/{{ order.OrderId }}">View</button></td>
             </tr>
         </tbody>

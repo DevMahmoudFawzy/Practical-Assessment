@@ -23,6 +23,21 @@ export class OrderService {
     return this._http.get<Order[]>(environment.orderServiceEndPoint).pipe(catchError(this.errorHandler));
   }
 
+  getOrdersAndProducts(): Observable<any> {
+    let orders = this._http.get<Order[]>(environment.orderServiceEndPoint);
+
+    return orders.pipe(
+      mergeMap((orders) => {
+        return this._productService.getAllProducts().pipe(
+          map(allProducts => {
+            return { allOrders: orders, allProducts };
+          })
+        )
+      }),
+      catchError(this.errorHandler)
+    );
+  }
+
   getOrder(id: string): Observable<OrderDetails> {
 
     let orders = this._http.get<Order[]>(environment.orderServiceEndPoint);

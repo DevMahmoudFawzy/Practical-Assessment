@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ListOrderComponent } from './components/list-order/list-order.component';
 import { ViewOrderComponent } from './components/view-order/view-order.component';
-import { orderResolver } from './guards/order.resolver';
+import { orderResolver } from './guards/order.resolvers';
 
 const routes: Routes = [
   {
