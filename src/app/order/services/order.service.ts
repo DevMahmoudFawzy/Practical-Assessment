@@ -5,13 +5,12 @@ import { Observable, catchError, concatMap, filter, map, mergeMap, of, switchMap
 import { Order } from '../models/order.model';
 import { ProductService } from 'src/app/product/services/product.service';
 import { Product } from 'src/app/product/models/product.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
-
-  url: string = "assets/data/orders.json";
 
   constructor(
     private _http: HttpClient,
@@ -19,13 +18,13 @@ export class OrderService {
   ) { }
 
   getAllOrders(): Observable<Order[]> {
-    return this._http.get<Order[]>(this.url).pipe(catchError(this.errorHandler));
+    return this._http.get<Order[]>(environment.orderServiceEndPoint).pipe(catchError(this.errorHandler));
   }
 
   getOrder(id: string): Observable<any> {
 
-    let orders = this._http.get<Order[]>(this.url);
-    let products = this._http.get<Product[]>("assets/data/products.json");
+    let orders = this._http.get<Order[]>(environment.orderServiceEndPoint);
+    let products = this._http.get<Product[]>(environment.productServiceEndPoint);
 
     return orders.pipe(
       map(allOrders => allOrders.find(singleOrder => singleOrder.OrderId == id)),
