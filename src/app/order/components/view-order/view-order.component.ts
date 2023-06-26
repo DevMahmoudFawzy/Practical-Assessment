@@ -20,12 +20,7 @@ export class ViewOrderComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._route.data.subscribe(
-      ({ order }) => {
-        console.log(order);
-        this.order = order;
-      }
-    );
+    this._route.data.subscribe(da => console.log(da));
   }
 
 }
