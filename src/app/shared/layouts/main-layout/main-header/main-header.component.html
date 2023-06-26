@@ -1,0 +1,25 @@
+<header class="main-header">
+    <div>
+        <button class="toggle-button" (click)="toggleSideNav()">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+        </button>
+        <a href="#" class="main-header__brand">
+            <img src="https://static.wixstatic.com/media/2f2d5a_8d34fb93cc9445bb9bfdd1f4943c12ab~mv2.gif" alt="">
+        </a>
+    </div>
+    <nav class="main-nav">
+        <ul class="main-nav__items">
+            <li class="main-nav__item">
+                <a routerLink="/products">Products</a>
+            </li>
+            <li class="main-nav__item">
+                <a routerLink="/orders">Orders</a>
+            </li>
+            <li class="main-nav__item">
+                <a routerLink="/customers">Customers</a>
+            </li>
+        </ul>
+    </nav>
+</header>
