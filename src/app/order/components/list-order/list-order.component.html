@@ -1,0 +1,22 @@
+<div class="container" style="padding: 64px 0;">
+    <table class="table table-success table-striped-columns table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Order Id</th>
+                <th scope="col">Order Date</th>
+                <th scope="col">User Id</th>
+                <th scope="col">Payment Method</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <th scope="row">{{order.OrderId}}</th>
+                <td>{{order.OrderDate}}</td>
+                <td>{{order.UserId}}</td>
+                <td>{{order.PaymentType}}</td>
+                <td><button routerLink="/orders/{{ order.OrderId }}">View</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

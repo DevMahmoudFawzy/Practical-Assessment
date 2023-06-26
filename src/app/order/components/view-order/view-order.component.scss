@@ -1,0 +1,15 @@
+.order-header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #FF7300;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top left, rgba(247, 182, 128, 1), rgba(247, 234, 224, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top left, rgba(247, 182, 128, 1), rgba(247, 234, 224, 1))
+}
