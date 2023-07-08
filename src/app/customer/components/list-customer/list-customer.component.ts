@@ -11,7 +11,7 @@ import { CustomerService } from '../../services/customer.service';
 })
 export class ListCustomerComponent extends BaseComponent implements OnInit {
 
-  customers!: Customer[];
+  customers: Customer[] = [];
   errorMessage: string = '';
 
   constructor(private _customerService: CustomerService) {
